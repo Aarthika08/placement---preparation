@@ -1,0 +1,69 @@
+
+   12-06-23                                             Shopup preparation-4
+                                                              Algorithms
+
+
+1.Define a function is_palindrome that takes a string as input and returns a boolean value indicating whether it is a palindrome or not.
+2.Remove any non-alphanumeric characters from the string using the isalnum method and convert it to lowercase to ignore case sensitivity:
+                        string= ''.join(c.lower() for c in string if c.isalnum())
+3.Initialize two pointers, start and end, to the first and last indices of the string, respectively:
+4.Use a while loop to iterate until start becomes greater than or equal to end
+5.Inside the loop, compare the characters at the start and end indices. If they are not equal, the string is not a palindrome, and you can return False to indicate Copy if string[start] != string[end]: return False
+6.Increment start and decrement end to compare the next pair of characters
+7.If the loop completes without encountering any unequal characters, the string is a palindrome. In this case, return True to indicate.
+
+
+def is_palindrome(string):
+  string = ''.join(c.lower() for c in string if c.isalnum())
+  start = 0
+  end = len(string) - 1
+
+  while start < end:
+    if string[start] != string[end]:
+      return False
+
+    start += 1
+    end -= 1
+
+  return True
+
+string = input("Enter a string: ")
+
+if is_palindrome(string):
+  print("The string is a palindrome.")
+else:
+  print("The string is not a palindrome.")
+
+
+
+
+
+Binary search algorithm
+1.Divide the search space into two halves by finding the middle index “mid”.
+2.Compare the middle element of the search space with the key. 
+3.If the key is found at middle element, the process is terminated.
+4.If the key is not found at middle element, choose which half will be used as the next search space.
+          1.If the key is smaller than the middle element, then the left side is used for next search.
+          2.If the key is larger than the middle element, then the right side is used for next search.
+5.This process is continued until the key is found or the total search space is exhausted.
+
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
+
+
+
+
+
