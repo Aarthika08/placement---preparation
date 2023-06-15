@@ -1,0 +1,15 @@
+def fact(f):
+    n=5
+    if f==1:
+        return 1
+    return f*fact(f-1)
+
+n=int(input()) 
+value=int(input()) 
+if value==0:
+    print("the value cannot be accepted")
+if value<1:
+    print("the value cannot be accepted")
+
+b=fact(value)    
+print("The facorial value is",b)
