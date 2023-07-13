@@ -1,0 +1,26 @@
+# arr: 12 3 14 56 77 13
+# num: 13
+# diff: 2
+# Output:
+# 3
+def findcount(r,n,num):
+    count=0
+    s=0
+    for i in range(len(r)):
+                s=abs(num-r[i])
+                if s<=n:
+                    count+=1
+                    
+
+    return count                
+
+
+
+r=list(map(int,input().split()))
+# r=[12,3,14,56,77,13]
+num=int(input())
+n=int(input())
+# n=len(r)
+t=findcount(r,n,num)
+print(t)
+
