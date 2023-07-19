@@ -1,0 +1,28 @@
+n=int(input())
+k=int(input())
+p=[]
+temp=[]
+myList=list(map(int,input().split()))
+
+# for i in range(0,len(l)-k):
+#   # for j in range(0,k+1):
+#         p.append(l[i])
+#         #print(l[i],l[j])
+
+# for j in range(len(l)-k,len(l)):
+#             temp.append(l[j])
+
+    
+# print(temp)
+# print(temp+p)
+
+myList = (myList[len(myList) - n:len(myList)] + myList[0:len(myList) - n])
+
+print("Updated List after rotation = ",myList)
+
+= RESTART: C:/Users/Python/Python311/practice/rotation.py
+5
+2
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+[4, 5, 1, 2, 3]
