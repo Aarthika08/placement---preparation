@@ -1,0 +1,44 @@
+Question 5 :Make It Palindrome
+Problem Statement  :
+
+You’re given a string, you’ve to print additional characters needed to make that string a palindrome.
+
+A Palindrome is a sequence of characters that has the property of reading the same in either direction.
+
+Input :
+abede
+Output :
+ba
+
+Sample Input :
+abcfe
+
+Sample output :
+fcba
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from collections import Counter 
+n='abede'
+# input()
+c=0
+flag=0
+p=''
+p=Counter(n)
+for a,b in p.items():
+    c+=1
+    if b>=2:
+       flag=1
+       break
+if flag==0:
+    o=n[:-1]
+    o=o[::-1]
+    print(n+o)
+    
+else:
+    o=n[:-c]
+    o=o[::-1]
+    print(n+o)
+    
+
+
+
+                    
