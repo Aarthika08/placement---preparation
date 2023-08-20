@@ -37,6 +37,24 @@ else:
     o=o[::-1]
     print(n+o)
     
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+def palindrome(s):
+    return s==s[::-1]
+def cal(s):
+    if palindrome(s):
+        return None
+    for i in range(len(s)):
+        x=s[:i][::-1]
+        print(s[:i])
+
+        if palindrome(s+x):
+          return x
+        
+        # if ispalindrome(s + x):
+        #     return x
+
+s = input()
+print(cal(s))
 
 
 
