@@ -1,6 +1,5 @@
 Question 5 :Make It Palindrome
 Problem Statement  :
-
 You’re given a string, you’ve to print additional characters needed to make that string a palindrome.
 
 A Palindrome is a sequence of characters that has the property of reading the same in either direction.
