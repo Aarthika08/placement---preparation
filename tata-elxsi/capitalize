@@ -25,3 +25,19 @@ for i in n:
         
 print(n)
 print(p)    
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+n=input()
+k=input()
+p=''
+for i in n:
+    # print(i)
+    if k==k.lower():
+              if i==k:
+                  p=n.replace(i.lower(),k.upper())
+        
+    else:    
+         if i==k.upper():
+                if i==k:
+                    p=n.replace(i,k.lower())
+print(n)
+print(p)        
